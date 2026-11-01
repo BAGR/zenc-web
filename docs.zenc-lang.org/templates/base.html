@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@200;400;500;700&display=swap"
         rel="stylesheet">
     <style>
         /* Palette from the logo: teal #368275, green #9fd484, cream #f4f8df */
@@ -103,6 +103,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .logo .edition {
+            font-weight: 200;
         }
 
         .logo {
@@ -752,7 +756,7 @@
             margin: 4rem auto 0;
             padding: 4rem 4rem;
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 4rem;
             border-top: 1px solid var(--border);
             font-size: 0.85rem;
@@ -800,32 +804,6 @@
             }
         }
 
-        /* NEWSLETTER STYLING (FOOTER ONLY) */
-        .newsletter-form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            width: 100%;
-        }
-
-        .btn-subscribe {
-            background: var(--primary);
-            color: var(--bg);
-            border: none;
-            padding: 10px 16px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-subscribe:hover {
-            opacity: 0.85;
-        }
 
         input[type="email"] {
             width: 100%;
@@ -844,13 +822,6 @@
             border-color: var(--fn);
         }
 
-        /* FOOTER NEWSLETTER */
-        .newsletter-form-footer {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            width: 100%;
-        }
 
         /* --- Theme Toggle in Docs --- */
         .theme-toggle {
@@ -1191,7 +1162,7 @@
     <header>
         <div class="container nav-container">
             <a href="{% if lang == 'en' %}{{ config.base_url | trim_end_matches(pat="/docs") }}/{% else %}{{ config.base_url | trim_end_matches(pat="/docs") }}/{{ lang }}/{% endif %}"
-                class="logo">Zen C <span class="version">{{
+                class="logo">Zen C <span class="edition">· Community Edition</span> <span class="version">{{
                     config.extra.version }}</span></a>
             <nav>
                 <div class="nav-links">
@@ -1402,23 +1373,6 @@
                     }}{% endif
                     %}</a>
                 <a href="{{ get_url(path="changelog/", trailing_slash=true) }}">{{ trans(key="changelog-title", lang=lang) }}</a>
-            </div>
-        </div>
-        <div class="footer-col" style="grid-column: span 1;">
-            <h4>{{ trans(key="newsletter-title", lang=lang) }}</h4>
-            <div class="footer-links">
-                <p style="margin-bottom: 1rem; line-height: 1.4; font-size: 0.8rem;">{{ trans(key="newsletter-desc",
-                    lang=lang) }}
-                </p>
-                <form action="https://buttondown.com/api/emails/embed-subscribe/zenc" method="post" target="popupwindow"
-                    onsubmit="window.open('https://buttondown.com/zenc', 'popupwindow')" class="newsletter-form-footer">
-                    <input type="email" name="email" id="bd-email-footer" placeholder="email@example.com" required>
-                    <input type="hidden" value="1" name="embed">
-                    <button type="submit" class="btn-subscribe">{{ trans(key="subscribe", lang=lang) }}</button>
-                </form>
-                <a href="https://buttondown.com/zenc" target="_blank"
-                    style="font-size: 0.75rem; margin-top: 0.75rem; opacity: 0.7; display: block;">{{
-                    trans(key="archives", lang=lang) }}</a>
             </div>
         </div>
     </footer>
