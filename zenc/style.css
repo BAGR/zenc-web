@@ -271,20 +271,7 @@ nav a.github-link {
     .hero-actions {
         justify-content: center;
     }
-
-    .newsletter-form-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .newsletter-form {
-        margin: 0 auto;
-        justify-content: center;
-    }
 }
-
 
 
 .mega-title {
@@ -804,8 +791,6 @@ pre code .z-link {
 }
 
 
-
-
 /* --- Interop Grid --- */
 .interop-grid {
     display: grid;
@@ -829,7 +814,6 @@ pre code .z-link {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
 }
-
 
 
 .interop-header {
@@ -874,7 +858,6 @@ pre code .z-link {
 }
 
 
-
 /* --- Community Videos --- */
 .videos-grid {
     display: grid;
@@ -900,7 +883,6 @@ pre code .z-link {
 [data-theme="dark"] .video-card:hover {
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
-
 
 
 .video-wrapper {
@@ -1085,12 +1067,11 @@ pre code .z-link {
 .footer-grid {
     padding: 6rem 2rem;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
     font-size: 0.85rem;
     color: var(--muted);
 }
-
 
 
 .footer-info {
@@ -1243,8 +1224,6 @@ section {
     opacity: 0.4;
     font-family: 'JetBrains Mono', monospace;
 }
-
-
 
 
 /* --- Mobile Responsiveness --- */
@@ -1457,150 +1436,6 @@ section {
 }
 
 /* --- Newsletter Section --- */
-.newsletter-inline {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.newsletter-inline p {
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-}
-
-.newsletter-form input[type="email"] {
-    flex-grow: 1;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 12px 16px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: var(--fg);
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.2s;
-}
-
-.newsletter-form input[type="email"]:focus {
-    border-color: var(--muted);
-    background: var(--surface-alt);
-}
-
-.newsletter-form .btn-subscribe {
-    background: var(--primary);
-    color: var(--bg);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.newsletter-form .btn-subscribe:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-
-
-.newsletter-section {
-    background: var(--surface-alt);
-    border-bottom: 1px solid var(--border);
-    padding: 8rem 0;
-    margin: 6rem 0;
-    text-align: center;
-}
-
-.newsletter-content {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.newsletter-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-}
-
-.newsletter-content p {
-    color: var(--muted);
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.newsletter-form-large {
-    margin-top: 1rem;
-    width: 100%;
-}
-
-.newsletter-form-large form {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-}
-
-.newsletter-form-large input[type="email"] {
-    flex-grow: 1;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 16px 24px;
-    font-size: 1rem;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.2s;
-    color: var(--fg);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.newsletter-form-large input[type="email"]:focus {
-    border-color: var(--muted);
-    background: var(--surface-alt);
-}
-
-.newsletter-form-large .btn-subscribe {
-    padding: 14px 32px;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.newsletter-footer-note {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin-top: 1rem;
-    opacity: 0.6;
-}
-
-.newsletter-footer-note a {
-    color: inherit;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form-large form {
-        flex-direction: column;
-    }
-
-    .newsletter-content h2 {
-        font-size: 2rem;
-    }
-}
 
 /* --- Newsletter Enhancements --- */
 .badge-new {
@@ -1616,13 +1451,6 @@ section {
     vertical-align: middle;
 }
 
-.hero-newsletter-cta {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
 .cta-note {
     font-size: 0.85rem;
     color: var(--muted);
@@ -1630,70 +1458,7 @@ section {
     opacity: 0.7;
 }
 
-.newsletter-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.newsletter-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
-}
-
 /* --- Footer Newsletter --- */
-.newsletter-form-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    align-items: flex-start;
-}
-
-@media (max-width: 1000px) {
-    .newsletter-form-footer {
-        align-items: center;
-        text-align: center;
-    }
-}
-
-
-.newsletter-form-footer input[type="email"] {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    border-radius: 4px;
-    color: var(--fg);
-    outline: none;
-    width: 100%;
-    transition: all 0.2s;
-}
-
-.newsletter-form-footer input[type="email"]:focus {
-    border-color: var(--muted);
-    background: var(--surface-alt);
-}
-
-.newsletter-form-footer .btn-subscribe {
-    background: var(--primary);
-    color: var(--bg);
-    border: none;
-    padding: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.newsletter-form-footer .btn-subscribe:hover {
-    opacity: 0.9;
-}
 
 /* --- Community & Rosetta Code --- */
 .community-section {
@@ -1906,42 +1671,6 @@ section {
     }
 }
 
-/* --- Zibi Mascot --- */
-.zibi-wrapper {
-    position: absolute;
-    /* Starts at the screen corner (0) and only slides off (negative) below 1200px */
-    left: clamp(-160px, calc(50vw - 600px), 0px);
-    bottom: 0;
-    width: 140px;
-    height: auto;
-    z-index: 5;
-    pointer-events: none;
-    line-height: 0;
-}
-
-@media (max-width: 900px) {
-    .zibi-wrapper {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-.peeking-character {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    opacity: 0.9;
-    transition: transform 0.3s ease;
-}
-
-.peeking-character:hover {
-    transform: translateY(-5px);
-}
 
 /* --- Zola Documentation Admonitions (Zen Garden) --- */
 .admonition {
@@ -2066,4 +1795,21 @@ html[data-theme="dark"] .admonition-caution {
 html[data-theme="dark"] .admonition-important .admonition-title,
 html[data-theme="dark"] .admonition-caution .admonition-title {
     color: #cc7373;
+}
+/* "Community Edition" next to the hero title */
+.mega-title sup {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.18em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    vertical-align: super;
+    margin-left: 0.5em;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+/* "Community Edition" next to the logo, much lighter than "Zen C" */
+.logo .edition {
+    font-weight: 200;
 }

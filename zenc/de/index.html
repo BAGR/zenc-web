@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Kaisei+Tokumin:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@200;400;500;700&family=Kaisei+Tokumin:wght@500;700;800&display=swap"
         rel="stylesheet">
 
     <link rel="icon"
@@ -39,7 +39,7 @@
 
     <header>
         <div class="container nav-container">
-            <a href="/" class="logo">Zen C <span class="version">v0.4.4</span></a>
+            <a href="/" class="logo">Zen C <span class="edition">· Community Edition</span> <span class="version">v0.4.4</span></a>
             <nav>
                 <div class="nav-links">
                     <a href="/docs/de/">Dokumentation</a>
@@ -95,7 +95,7 @@
     <main>
         <section class="hero container">
             <div class="hero-text">
-                <h1 class="mega-title">ZEN C</h1>
+                <h1 class="mega-title">ZEN C<sup>Community Edition</sup></h1>
                 <h2 class="sub-title">Moderne Ergonomie.<br>Null Overhead.<br>Reines C.</h2>
 
                 <p class="lead">
@@ -115,18 +115,6 @@
                 <div class="hero-actions">
                     <a href="https://github.com/zenc-lang-ce/zenc" class="btn btn-primary">Loslegen</a>
                     <a href="https://discord.com/invite/q6wEsCmkJP" class="btn btn-secondary">Discord</a>
-                    <a href="#newsletter" class="btn btn-secondary">Newsletter &rarr;</a>
-                </div>
-
-                <div class="newsletter-inline">
-                    <p>Updates:</p>
-                    <form action="https://buttondown.com/api/emails/embed-subscribe/zenc" method="post"
-                        target="popupwindow" onsubmit="window.open('https://buttondown.com/zenc', 'popupwindow')"
-                        class="newsletter-form">
-                        <input type="email" name="email" id="bd-email" placeholder="email@example.com" required>
-                        <input type="hidden" value="1" name="embed">
-                        <button type="submit" class="btn btn-primary">Join</button>
-                    </form>
                 </div>
             </div>
 
@@ -537,24 +525,6 @@
 
         </section>
 
-        <section id="newsletter" class="newsletter-section">
-            <div class="container">
-                <div class="newsletter-content">
-                    <h2 class="section-title">Die E-Mailing-Liste für Ingenieure.</h2>
-                    <p>Direkte Updates zu Sprachfunktionen, Veröffentlichungen der Standardbibliothek und Roadmap-Fortschritt.</p>
-                    <div class="newsletter-form-large">
-                        <form action="https://buttondown.com/api/emails/embed-subscribe/zenc" method="post"
-                            target="popupwindow" onsubmit="window.open('https://buttondown.com/zenc', 'popupwindow')">
-                            <input type="email" name="email" id="bd-email-large" placeholder="email@example.com"
-                                required>
-                            <input type="hidden" value="1" name="embed">
-                            <button type="submit" class="btn btn-primary" style="padding: 14px 32px; border-radius: 8px;">Updates abonnieren</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer class="site-footer">
@@ -562,7 +532,7 @@
             <div class="footer-info">
                 <strong class="footer-logo">Zen C</strong>
                 <span>Reines C.</span>
-                <span>&copy; 2026 zenc-lang Org.</span>
+                <span>&copy; 2026 zenc-lang-ce Org.</span>
             </div>
             <div class="footer-col">
                 <h4>Projekt</h4>
@@ -571,41 +541,8 @@
                     <a href="https://github.com/zenc-lang-ce/zenc">Spiegel</a>
                     <a href="#interop">Interop</a>
                     <a href="#roadmap">Roadmap</a>
-                    <a href="#newsletter">Newsletter</a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <div class="footer-links">
-                    <p style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--muted);">Mailingliste.</p>
-                    <form action="https://buttondown.com/api/emails/embed-subscribe/zenc" method="post"
-                        target="popupwindow" onsubmit="window.open('https://buttondown.com/zenc', 'popupwindow')"
-                        class="newsletter-form-footer">
-                        <input type="email" name="email" id="bd-email-footer" placeholder="email@example.com" required>
-                        <input type="hidden" value="1" name="embed">
-                        <button type="submit" class="btn-subscribe">Abonnieren</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="zibi-wrapper">
-            <svg class="peeking-character" alt="Zibi Mascot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 260">
-                <g transform="scale(10)">
-                    <rect x="-1" y="14" width="12" height="12" fill="#8B5A2B" />
-                    <rect x="-1" y="22" width="12" height="2" fill="#694124" />
-                    <rect x="11" y="14" width="3" height="10" fill="#63C75A" />
-                    <rect x="0" y="16" width="2" height="3" fill="#63C75A" />
-                    <rect x="2" y="16" width="1" height="1" fill="#63C75A" />
-                    <rect x="0" y="2" width="10" height="12" fill="#63C75A" />
-                    <rect x="10" y="4" width="3" height="2" fill="#63C75A" />
-                    <rect x="12" y="3" width="1" height="1" fill="#63C75A" />
-                    <rect x="2" y="5" width="2" height="2" fill="#FFFFFF" />
-                    <rect x="6" y="5" width="2" height="2" fill="#FFFFFF" />
-                    <rect x="3" y="5" width="1" height="1" fill="#336633" />
-                    <rect x="7" y="5" width="1" height="1" fill="#336633" />
-                    <rect x="3" y="10" width="4" height="1" fill="#336633" />
-                </g>
-            </svg>
         </div>
     </footer>
 
