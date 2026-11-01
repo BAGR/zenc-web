@@ -12,5 +12,7 @@ docs.zenc-lang.org/public/
 # Ignore system files
 .DS_Store
 
+# Ignore editors
+.vscode
 
 zola
