@@ -38,7 +38,7 @@ jobs:
 
       - name: Assemble the site
         # The landing page and the playground link with root paths (/style.css, /es/, /docs/).
-        # Prefix them with the Pages path: /zenc-web on the project site, nothing on a custom domain.
+        # Prefix them with the Pages path: nothing on this repository (the organization site) or a custom domain, /<repo> on a project site.
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
           rsync -a --exclude translate_site.js --exclude test_rx.js zenc/ _site/
