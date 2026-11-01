@@ -19,6 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if section.title %}{{ section.title }}{% elif page.title %}{{ page.title }}{% else %}{{ config.title }}{%
         endif %} — Zen C</title>
+    <link rel="icon" href="{{ get_url(path="favicon.ico", trailing_slash=false) }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png", trailing_slash=false) }}">
+    <link rel="apple-touch-icon" href="{{ get_url(path="apple-touch-icon.png", trailing_slash=false) }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -1171,7 +1174,6 @@
                         trans(key="ui-home", lang=lang) }}</a>
                     <a href="{{ get_url(path=" /", lang=lang) }}" class="active">{{ trans(key="ui-docs", lang=lang)
                         }}</a>
-                    <a href="{{ config.base_url | trim_end_matches(pat="/docs") }}/playground.html">{{ trans(key="ui-playground", lang=lang) }}</a>
                     <a href="{{ config.extra.github_url }}">{{ trans(key="ui-git", lang=lang) }}</a>
                 </div>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
