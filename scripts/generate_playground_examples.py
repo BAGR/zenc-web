@@ -37,5 +37,5 @@ def extract_examples(content_dir, output_file):
 if __name__ == "__main__":
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     content_dir = os.path.join(base_path, 'docs.zenc-lang.org', 'content')
-    output_file = os.path.join(base_path, 'zenc', 'examples.json')
+    output_file = os.path.join(base_path, 'playground', 'examples.json')
     extract_examples(content_dir, output_file)

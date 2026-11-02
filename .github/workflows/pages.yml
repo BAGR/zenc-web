@@ -26,24 +26,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Generate Playground Examples
-        run: |
-          python3 scripts/generate_playground_examples.py
-
-      - name: Build Zola Docs
-        # The docs are served under /docs of the Pages site.
+      - name: Build the site
+        # Zola builds the landing page at the root and the documentation under /docs.
         run: |
           wget -qO- https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          cd docs.zenc-lang.org && ../zola build --base-url "${{ steps.pages.outputs.base_url }}/docs" --output-dir ../_site/docs
-
-      - name: Assemble the site
-        # The landing page and the playground link with root paths (/style.css, /es/, /docs/).
-        # Prefix them with the Pages path: /zenc-web on the project site, nothing on a custom domain.
-        run: |
-          BASE_PATH="${{ steps.pages.outputs.base_path }}"
-          rsync -a --exclude translate_site.js --exclude test_rx.js zenc/ _site/
-          find _site -name '*.html' -not -path '_site/docs/*' \
-            -exec sed -i -E "s#(href|src)=\"/#\1=\"${BASE_PATH}/#g" {} +
+          cd docs.zenc-lang.org && ../zola build --base-url "${{ steps.pages.outputs.base_url }}" --output-dir ../_site
 
       - name: Upload the site
         uses: actions/upload-pages-artifact@v3
