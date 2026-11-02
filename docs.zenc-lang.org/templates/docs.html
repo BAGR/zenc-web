@@ -1167,6 +1167,10 @@
                         class="sidebar-link {% if current_path == "/docs/changelog/" %}active{% endif %}">
                         {{ trans(key="changelog-title", lang=lang) }}
                     </a>
+                    <a href="{{ get_url(path="docs/editors/", trailing_slash=true) }}"
+                        class="sidebar-link {% if current_path == "/docs/editors/" %}active{% endif %}">
+                        {{ trans(key="editors-title", lang=lang) }}
+                    </a>
                 </div>
             </div>
 
