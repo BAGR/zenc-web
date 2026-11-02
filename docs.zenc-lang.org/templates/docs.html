@@ -1159,6 +1159,10 @@
                     </svg>
                 </div>
                 <div class="sidebar-links">
+                    <a href="{{ get_url(path="docs/introduction/", trailing_slash=true) }}"
+                        class="sidebar-link {% if current_path == "/docs/introduction/" %}active{% endif %}">
+                        {{ trans(key="introduction-title", lang=lang) }}
+                    </a>
                     <a href="{{ get_url(path="docs/install/", trailing_slash=true) }}"
                         class="sidebar-link {% if current_path == "/docs/install/" %}active{% endif %}">
                         {{ trans(key="install-title", lang=lang) }}

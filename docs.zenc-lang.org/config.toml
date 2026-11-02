@@ -60,6 +60,7 @@ description = "Zen C 系統語言官方手冊。"
 
 [translations]
 migrations-title = "Migrations"
+introduction-title = "Introduction"
 install-title = "Install"
 start-title = "Getting Started"
 changelog-title = "Changelog"
@@ -98,6 +99,7 @@ stdlib-imports = "// standard library imports"
 
 [languages."de".translations]
 migrations-title = "Migrationen"
+introduction-title = "Einführung"
 install-title = "Installation"
 start-title = "Erste Schritte"
 changelog-title = "Änderungsprotokoll"
@@ -136,6 +138,7 @@ stdlib-imports = "// standardbibliothek-importe"
 
 [languages."es".translations]
 migrations-title = "Migraciones"
+introduction-title = "Introducción"
 install-title = "Instalación"
 start-title = "Primeros pasos"
 changelog-title = "Registro de cambios"
@@ -174,6 +177,7 @@ stdlib-imports = "// importaciones de la biblioteca estándar"
 
 [languages."it".translations]
 migrations-title = "Migrazioni"
+introduction-title = "Introduzione"
 install-title = "Installazione"
 start-title = "Per iniziare"
 changelog-title = "Registro delle modifiche"
@@ -212,6 +216,7 @@ stdlib-imports = "// importazioni della libreria standard"
 
 [languages."pt".translations]
 migrations-title = "Migrações"
+introduction-title = "Introdução"
 install-title = "Instalação"
 start-title = "Primeiros passos"
 changelog-title = "Registro de alterações"
@@ -250,6 +255,7 @@ stdlib-imports = "// importações da biblioteca padrão"
 
 [languages."ru".translations]
 migrations-title = "Миграции"
+introduction-title = "Введение"
 install-title = "Установка"
 start-title = "Начало работы"
 changelog-title = "Список изменений"
@@ -288,6 +294,7 @@ stdlib-imports = "// импорт стандартной библиотеки"
 
 [languages."zh-cn".translations]
 migrations-title = "迁移指南"
+introduction-title = "简介"
 install-title = "安装"
 start-title = "入门"
 changelog-title = "更新日志"
@@ -326,6 +333,7 @@ stdlib-imports = "// 标准库导入"
 
 [languages."zh-tw".translations]
 migrations-title = "遷移指南"
+introduction-title = "簡介"
 install-title = "安裝"
 start-title = "入門"
 changelog-title = "更新日誌"
