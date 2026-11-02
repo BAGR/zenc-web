@@ -10,6 +10,7 @@ title = "std/map"
 
 ```zc
 import "std/map.zc"
+import "std/io.zc"
 
 fn main() {
     let m = Map<int>::new();
@@ -19,7 +20,7 @@ fn main() {
     
     if (m.contains("uno")) {
         let val = m.get("uno");
-        println "{val.unwrap()}";
+        println(f"{val.unwrap()}");
     }
     
     m.remove("due");
@@ -53,7 +54,7 @@ let m = Map<int>::new();
 m.put("a", 1);
 
 for entry in m {
-    println "Chiave: {entry.key}, Val: {entry.val}";
+    println(f"Chiave: {entry.key}, Val: {entry.val}");
 }
 ```
 

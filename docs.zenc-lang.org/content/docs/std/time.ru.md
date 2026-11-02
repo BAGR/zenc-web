@@ -17,6 +17,7 @@ title = "std/time"
 
 ```zc
 import "std/time.zc"
+import "std/io.zc"
 
 fn main() {
     let start = Time::now();
@@ -25,7 +26,7 @@ fn main() {
     Time::sleep(Duration::from_ms(1500));
     
     let end = Time::now();
-    println "Прошло: {end - start} мс";
+    println(f"Прошло: {end - start} мс");
 }
 ```
 

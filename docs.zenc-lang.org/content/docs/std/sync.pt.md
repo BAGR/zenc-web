@@ -17,6 +17,7 @@ O módulo `std/sync` fornece um conjunto abrangente de primitivas de sincroniza�
 
 ```zc
 import "std/sync.zc"
+import "std/io.zc"
 
 fn main() {
     let m = Mutex::new();
@@ -31,7 +32,7 @@ fn main() {
     // Inicialização de uma única vez
     let once = Once::new();
     once.call(|| {
-        println "Inicializado!";
+        println("Inicializado!");
     });
 }
 ```

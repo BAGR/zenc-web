@@ -10,6 +10,7 @@ title = "std/string"
 
 ```zc
 import "std/string.zc"
+import "std/io.zc"
 
 fn main() {
     let s = String::from("Hello");
@@ -20,11 +21,11 @@ fn main() {
     
     // Iterazione (consapevole di UTF-8)
     for c in s {
-        println "{c}";
+        println(f"{c}");
     }
 
     // Usa c_str() per stampare
-    println "{s.c_str()}"; // Stampa "Hello World"
+    println(f"{s.c_str()}"); // Stampa "Hello World"
     
     if (s.starts_with("Hello")) {
         // ...

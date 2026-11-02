@@ -17,6 +17,7 @@ title = "std/process"
 
 ```zc
 import "std/process.zc"
+import "std/io.zc"
 
 fn main() {
     // 基本命令执行
@@ -25,10 +26,10 @@ fn main() {
         .output();
         
     if (output.exit_code == 0) {
-        println "捕获内容: {output.std_out}";
+        println(f"捕获内容: {output.std_out}");
         // output.std_out 是一个 String，会自动释放
     } else {
-        println "命令执行失败，退出码为 {output.exit_code}";
+        println(f"命令执行失败，退出码为 {output.exit_code}");
     }
 }
 ```

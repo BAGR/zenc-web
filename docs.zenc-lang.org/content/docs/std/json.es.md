@@ -17,6 +17,7 @@ El módulo `std/json` proporciona una implementación de analizador y constructo
 
 ```zc
 import "std/json.zc"
+import "std/io.zc"
 
 fn main() {
     // Construyendo JSON
@@ -27,16 +28,16 @@ fn main() {
     
     // Serialización
     let json_str = obj.to_string();
-    println "Serializado: {json_str}";
+    println(f"Serializado: {json_str}");
     
     // Análisis
     let entrada = "{\"puntuación\": 100}";
     match JsonValue::parse(entrada) {
         Ok(parsed) => {
-            println "Puntuación: {parsed.get(\"puntuación\").unwrap().as_int().unwrap()}";
+            println(f"Puntuación: {parsed.get(\"puntuación\").unwrap().as_int().unwrap()}");
             // parsed se libera automáticamente cuando termina este bloque
         }
-        Err(e) => println "Error: {e}"
+        Err(e) => println(f"Error: {e}")
     }
 } // obj se libera automáticamente aquí
 ```

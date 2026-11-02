@@ -17,6 +17,7 @@ title = "std/result"
 
 ```zc
 import "std/result.zc"
+import "std/io.zc"
 
 fn divide(a: int, b: int) -> Result<int> {
     if (b == 0) {
@@ -27,8 +28,8 @@ fn divide(a: int, b: int) -> Result<int> {
 
 fn main() {
     match divide(10, 0) {
-        Ok(val) => println "Ergebnis: {val}",
-        Err(e)  => println "Fehler: {e}"
+        Ok(val) => println(f"Ergebnis: {val}"),
+        Err(e)  => println(f"Fehler: {e}")
     }
 }
 ```

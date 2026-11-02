@@ -10,6 +10,7 @@ title = "std/random"
 
 ```zc
 import "std/random.zc"
+import "std/io.zc"
 
 fn main() {
     // Автоматически инициализирует генератор текущим временем
@@ -18,7 +19,7 @@ fn main() {
     // Генерация случайных целых чисел
     let bounded = rng.next_int_range(1, 100); // от 1 до 100 включительно
     
-    println "Выпало: {bounded}";
+    println(f"Выпало: {bounded}");
 }
 ```
 

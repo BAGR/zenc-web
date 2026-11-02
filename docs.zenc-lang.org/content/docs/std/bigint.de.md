@@ -17,6 +17,7 @@ Das Modul `std/bigint` bietet Ganzzahl-Arithmetik mit beliebiger Präzision. Es 
 
 ```zc
 import "std/bigint.zc"
+import "std/io.zc"
 
 fn main() {
     // Erstelle BigInt aus einem String
@@ -24,7 +25,7 @@ fn main() {
     let b = BigInt::from_int(1000);
     
     let result = a * b;
-    println "Ergebnis: {result.to_string()}";
+    println(f"Ergebnis: {result.to_string()}");
 }
 ```
 

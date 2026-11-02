@@ -17,6 +17,7 @@ Das Modul `std/process` bietet eine High-Level-API zum Erzeugen von Kindprozesse
 
 ```zc
 import "std/process.zc"
+import "std/io.zc"
 
 fn main() {
     // Grundlegende Befehlsausführung
@@ -25,10 +26,10 @@ fn main() {
         .output();
         
     if (output.exit_code == 0) {
-        println "Erfasst: {output.std_out}";
+        println(f"Erfasst: {output.std_out}");
         // output.std_out ist ein String, wird automatisch freigegeben
     } else {
-        println "Befehl fehlgeschlagen mit Code {output.exit_code}";
+        println(f"Befehl fehlgeschlagen mit Code {output.exit_code}");
     }
 }
 ```

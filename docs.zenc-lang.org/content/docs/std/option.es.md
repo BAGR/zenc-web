@@ -17,12 +17,13 @@ title = "std/option"
 
 ```zc
 import "std/option.zc"
+import "std/io.zc"
 
 fn main() {
     let val = Option<int>::Some(10);
     
     if (val.is_some()) {
-        println "El valor es {val.unwrap()}";
+        println(f"El valor es {val.unwrap()}");
     }
     
     let vacio = Option<int>::None();

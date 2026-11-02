@@ -17,6 +17,7 @@ Das Modul `std/time` bietet Hilfsmittel für hochpräzise Zeitmessung und das Un
 
 ```zc
 import "std/time.zc"
+import "std/io.zc"
 
 fn main() {
     let start = Time::now();
@@ -25,7 +26,7 @@ fn main() {
     Time::sleep(Duration::from_ms(1500));
     
     let end = Time::now();
-    println "Vergangen: {end - start} ms";
+    println(f"Vergangen: {end - start} ms");
 }
 ```
 

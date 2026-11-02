@@ -17,6 +17,7 @@ El módulo `std/time` proporciona utilidades para la medición del tiempo de alt
 
 ```zc
 import "std/time.zc"
+import "std/io.zc"
 
 fn main() {
     let inicio = Time::now();
@@ -25,7 +26,7 @@ fn main() {
     Time::sleep(Duration::from_ms(1500));
     
     let fin = Time::now();
-    println "Transcurrido: {fin - inicio} ms";
+    println(f"Transcurrido: {fin - inicio} ms");
 }
 ```
 

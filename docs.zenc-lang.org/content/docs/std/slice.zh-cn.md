@@ -17,6 +17,7 @@ title = "std/slice"
 
 ```zc
 import "std/slice.zc"
+import "std/io.zc"
 
 fn main() {
     let arr: int[5] = [10, 20, 30, 40, 50];
@@ -26,12 +27,12 @@ fn main() {
     
     // 直接遍历切片
     for val in s {
-        println "{val}";
+        println(f"{val}");
     }
     
     // 直接遍历数组（自动导入 std/slice.zc）
     for val in arr {
-        println "{val}";
+        println(f"{val}");
     }
 }
 ```

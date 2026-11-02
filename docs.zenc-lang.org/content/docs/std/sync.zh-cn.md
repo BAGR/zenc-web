@@ -17,6 +17,7 @@ title = "std/sync"
 
 ```zc
 import "std/sync.zc"
+import "std/io.zc"
 
 fn main() {
     let m = Mutex::new();
@@ -31,7 +32,7 @@ fn main() {
     // 一次性初始化
     let once = Once::new();
     once.call(|| {
-        println "已完成初始化！";
+        println("已完成初始化！");
     });
 }
 ```

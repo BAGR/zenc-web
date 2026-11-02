@@ -17,6 +17,7 @@ title = "std/vec"
 
 ```zc
 import "std/vec.zc"
+import "std/io.zc"
 
 fn main() {
     let v = Vec<int>::new();
@@ -25,7 +26,7 @@ fn main() {
     
     // Итерация
     for x in &v {
-        println "{(*x)}";
+        println(f"{(*x)}");
     }
 } // v освобождается здесь автоматически
 ```

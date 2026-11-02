@@ -17,6 +17,7 @@ title = "std/arena"
 
 ```zc
 import "std/arena.zc"
+import "std/io.zc"
 
 struct Node {
     val: int;
@@ -33,7 +34,7 @@ fn main() {
     // 将字符串复制到 arena 内存中
     let s = a.dup_str("Hello World");
     
-    println "Arena 已使用: {a.bytes_used()} 字节";
+    println(f"Arena 已使用: {a.bytes_used()} 字节");
     
     // 当 'a' 超出作用域时，所有内存都会自动释放
 }

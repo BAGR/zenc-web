@@ -10,10 +10,11 @@ title = "std/regex"
 
 ```zc
 import "std/regex.zc"
+import "std/io.zc"
 
 fn main() {
     if regex_match("^[a-z]+$", "hello") {
-        println "Совпадение!";
+        println("Совпадение!");
     }
     
     let re = Regex::compile("\\d+");

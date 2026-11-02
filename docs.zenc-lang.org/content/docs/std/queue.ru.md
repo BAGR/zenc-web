@@ -10,6 +10,7 @@ title = "std/queue"
 
 ```zc
 import "std/queue.zc"
+import "std/io.zc"
 
 fn main() {
     let q = Queue<int>::new();
@@ -20,7 +21,7 @@ fn main() {
     
     // Pop возвращает Option<T>
     if (q.pop().is_some()) {
-        println "Извлечено: {q.pop().unwrap()}"; // 1
+        println(f"Извлечено: {q.pop().unwrap()}"); // 1
     }
 }
 ```

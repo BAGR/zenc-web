@@ -10,6 +10,7 @@ O módulo `std/random` fornece uma cobertura de gerador de números pseudo-aleat
 
 ```zc
 import "std/random.zc"
+import "std/io.zc"
 
 fn main() {
     // Inicializa automaticamente o gerador com o tempo atual
@@ -18,7 +19,7 @@ fn main() {
     // Gerar inteiros aleatórios
     let bounded = rng.next_int_range(1, 100); // 1 a 100 inclusive
     
-    println "Sorteado: {bounded}";
+    println(f"Sorteado: {bounded}");
 }
 ```
 

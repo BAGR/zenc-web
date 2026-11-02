@@ -17,6 +17,7 @@ title = "std/bigfloat"
 
 ```zc
 import "std/bigfloat.zc"
+import "std/io.zc"
 
 fn main() {
     let a = BigFloat::from_int(123);
@@ -28,7 +29,7 @@ fn main() {
     let sum = a.add(b);
     
     let s = sum.to_string();
-    println "總和: {s}"; // 總和: 5.797
+    println(f"總和: {s}"); // 總和: 5.797
     free(s);
 } // a, b, 和 sum 在此處自動釋放
 ```

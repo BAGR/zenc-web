@@ -16,6 +16,7 @@ Das Modul `std/env` bietet plattformübergreifenden Zugriff auf Prozess-Umgebung
 
 ```zc
 import "std/env.zc"
+import "std/io.zc"
 
 fn main() {
     // Setzen einer Umgebungsvariablen
@@ -23,17 +24,17 @@ fn main() {
 
     // Abrufen (Geliehen)
     match Env::get("MY_APP_MODE") {
-        Some(val) => println "Modus: {val}",
-        None => println "Modus nicht gesetzt"
+        Some(val) => println(f"Modus: {val}"),
+        None => println("Modus nicht gesetzt")
     }
 
     // Abrufen (Eigener String für RAII)
     match Env::get_dup("HOME") {
         Some(home) => {
-             println "Heimatverzeichnis: {home}";
+             println(f"Heimatverzeichnis: {home}");
              // home wird automatisch freigegeben
         }
-        None => println "HOME nicht gefunden"
+        None => println("HOME nicht gefunden")
     }
 }
 ```
