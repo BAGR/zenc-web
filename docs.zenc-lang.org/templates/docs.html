@@ -600,6 +600,48 @@
             line-height: 1.6;
         }
 
+        /* ── Zen C / C tabs: an example followed by the C it transpiles to ── */
+        .code-tabs {
+            margin-bottom: 2.5rem;
+        }
+
+        .code-tabs pre {
+            margin-bottom: 0;
+            border-top-left-radius: 0;
+        }
+
+        .code-tabs pre[hidden] {
+            display: none;
+        }
+
+        .code-tabs-bar {
+            display: flex;
+            gap: 0.25rem;
+            padding-left: 4px;
+        }
+
+        .code-tab {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            padding: 0.35rem 0.9rem;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            border-radius: 6px 6px 0 0;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .code-tab:hover {
+            color: var(--fg);
+        }
+
+        .code-tab[aria-selected="true"] {
+            background: var(--surface-alt);
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         /* ── Zen C Syntax Highlighting ── */
         /* Success animation */
         .copy-success::before {
@@ -1281,6 +1323,42 @@
                 });
 
                 pre.appendChild(button);
+            });
+
+            // A Zen C example followed by a C block is shown as two tabs: Zen C, and the C it
+            // transpiles to
+            document.querySelectorAll('.doc-content pre[data-lang="zc"]').forEach(function (zc) {
+                var c = zc.nextElementSibling;
+                if (!c || c.tagName !== "PRE" || c.getAttribute("data-lang") !== "c") return;
+
+                var tabs = document.createElement("div");
+                tabs.className = "code-tabs";
+                var bar = document.createElement("div");
+                bar.className = "code-tabs-bar";
+                bar.setAttribute("role", "tablist");
+
+                [[zc, "Zen C"], [c, {{ trans(key="code-tab-c", lang=lang) | json_encode | safe }}]].forEach(function (tab, i) {
+                    var button = document.createElement("button");
+                    button.type = "button";
+                    button.className = "code-tab";
+                    button.setAttribute("role", "tab");
+                    button.setAttribute("aria-selected", i === 0 ? "true" : "false");
+                    button.textContent = tab[1];
+                    tab[0].hidden = i !== 0;
+                    button.addEventListener("click", function () {
+                        bar.querySelectorAll(".code-tab").forEach(function (other) {
+                            other.setAttribute("aria-selected", other === button ? "true" : "false");
+                        });
+                        zc.hidden = tab[0] !== zc;
+                        c.hidden = tab[0] !== c;
+                    });
+                    bar.appendChild(button);
+                });
+
+                zc.parentNode.insertBefore(tabs, zc);
+                tabs.appendChild(bar);
+                tabs.appendChild(zc);
+                tabs.appendChild(c);
             });
 
             // ... rest of search logic ...
