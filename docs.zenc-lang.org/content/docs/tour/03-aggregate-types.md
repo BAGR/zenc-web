@@ -124,6 +124,7 @@ Structs use [Move Semantics](@/docs/tour/08-memory-management.md#resource-semant
 #### Opaque Structs
 You can define a struct as `opaque` to restrict access to its fields to the defining module only, while still allowing the struct to be allocated on the stack (size is known).
 
+<!-- zc-check: skip: opaque-type example, depends on a separate user.zc module -->
 ```zc
 // In user.zc
 opaque struct User {
@@ -258,6 +259,7 @@ typedef z_closure_T OpFunc;
 #### Opaque Type Aliases
 You can define a type alias as `opaque` to create a new type that is distinct from its underlying type outside of the defining module. This provides strong encapsulation and type safety without the runtime overhead of a wrapper struct.
 
+<!-- zc-check: skip: opaque-alias example, depends on a separate library.zc module -->
 ```zc
 // In library.zc
 opaque alias Handle = int;

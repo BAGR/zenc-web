@@ -5,7 +5,6 @@ weight = 11
 
 # 11. Concurrency {#11-concurrency}
 
-
 Threads come from `std/thread.zc`, built on pthreads. `Thread::spawn` runs a function or a closure in a new thread, and `join` waits for it to finish.
 
 ```zc

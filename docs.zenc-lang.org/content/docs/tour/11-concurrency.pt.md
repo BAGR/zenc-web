@@ -5,7 +5,6 @@ weight = 11
 
 # 11. Concorrência {#11-concorrencia}
 
-
 As threads vêm de `std/thread.zc`, construído sobre pthreads. `Thread::spawn` executa uma função ou um closure numa nova thread, e `join` espera que ela termine.
 
 ```zc

@@ -5,7 +5,6 @@ weight = 7
 
 # 7. Stampaggio e Interpolazione delle Stringhe {#7-stampaggio-e-interpolazione-delle-stringhe}
 
-
 `print`, `println`, `eprint` ed `eprintln` sono funzioni di `std/io.zc`, quindi un programma che stampa importa questo modulo. Ognuna riceve una sola stringa.
 
 | Funzione | Descrizione |

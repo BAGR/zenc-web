@@ -5,7 +5,6 @@ weight = 7
 
 # 7. 打印与字符串插值 {#7-da-yin-yu-zi-fu-chuan-cha-zhi}
 
-
 `print`、`println`、`eprint` 和 `eprintln` 是 `std/io.zc` 中的函数，因此需要打印的程序要导入该模块。每个函数接受一个字符串。
 
 | 函数 | 描述 |

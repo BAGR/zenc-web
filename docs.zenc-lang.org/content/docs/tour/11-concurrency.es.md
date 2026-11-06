@@ -5,7 +5,6 @@ weight = 11
 
 # 11. Concurrencia {#11-concurrencia}
 
-
 Los hilos los proporciona `std/thread.zc`, construido sobre pthreads. `Thread::spawn` ejecuta una función o un closure en un hilo nuevo, y `join` espera a que termine.
 
 ```zc

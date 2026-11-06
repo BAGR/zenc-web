@@ -5,7 +5,6 @@ weight = 7
 
 # 7. Ausgabe und String-Interpolation {#7-ausgabe-und-string-interpolation}
 
-
 `print`, `println`, `eprint` und `eprintln` sind Funktionen aus `std/io.zc`; ein Programm, das etwas ausgibt, importiert dieses Modul. Jede nimmt genau einen String.
 
 | Funktion | Beschreibung |

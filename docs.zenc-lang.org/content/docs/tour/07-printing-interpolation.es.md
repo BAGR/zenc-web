@@ -5,7 +5,6 @@ weight = 7
 
 # 7. Impresión e Interpolación de Cadenas {#7-impresion-e-interpolacion-de-cadenas}
 
-
 `print`, `println`, `eprint` y `eprintln` son funciones de `std/io.zc`, así que un programa que imprime importa ese módulo. Cada una recibe una sola cadena.
 
 | Función | Descripción |

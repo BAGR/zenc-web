@@ -5,7 +5,6 @@ weight = 11
 
 # 11. 并发 {#11-bing-fa}
 
-
 线程由 `std/thread.zc` 提供，基于 pthreads。`Thread::spawn` 在新线程中运行一个函数或闭包，`join` 等待它结束。
 
 ```zc

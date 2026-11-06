@@ -5,7 +5,6 @@ weight = 11
 
 # 11. Nebenläufigkeit {#11-nebenlaufigkeit}
 
-
 Threads stellt `std/thread.zc` bereit, aufgebaut auf pthreads. `Thread::spawn` führt eine Funktion oder einen Closure in einem neuen Thread aus, und `join` wartet auf dessen Ende.
 
 ```zc

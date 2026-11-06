@@ -5,7 +5,6 @@ weight = 7
 
 # 7. Print e Interpolação de Strings {#7-print-e-interpolacao-de-strings}
 
-
 `print`, `println`, `eprint` e `eprintln` são funções de `std/io.zc`, então um programa que imprime importa esse módulo. Cada uma recebe uma única string.
 
 | Função | Descrição |

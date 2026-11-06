@@ -5,7 +5,6 @@ weight = 7
 
 # 7. Printing and String Interpolation {#7-printing-and-string-interpolation}
 
-
 `print`, `println`, `eprint` and `eprintln` are functions of `std/io.zc`, so a program that prints imports it. Each one takes a single string.
 
 | Function | Description |

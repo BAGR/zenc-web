@@ -5,7 +5,6 @@ weight = 7
 
 # 7. 打印與字符串插值 {#7-da-yin-yu-zi-fu-chuan-cha-zhi}
 
-
 `print`、`println`、`eprint` 和 `eprintln` 是 `std/io.zc` 中的函數，因此需要列印的程式要匯入該模組。每個函數接受一個字串。
 
 | 函數 | 描述 |
