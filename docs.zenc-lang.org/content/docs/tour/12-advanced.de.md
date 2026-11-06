@@ -106,13 +106,13 @@ Verwende in der Kompilierzeit rohe Zeichenketten (`r"..."`), um das Maskieren vo
 #### Embed
 Binde Dateien als bestimmte Typen ein.
 ```zc
-// Standard ([char])
+// Standard (Slice_char)
 let data = embed "assets/logo.png";
 
 // Typisierte Einbindung
 let text = embed "shader.glsl" as string;    // Einbindung als C-String
 let rom  = embed "bios.bin" as u8[1024];     // Einbindung als fixiertes Array
-let wav  = embed "sound.wav" as u8[];        // Einbindung als [u8]
+let wav  = embed "sound.wav" as u8[];        // Einbindung als Slice_u8
 ```
 
 #### Plugins

@@ -106,13 +106,13 @@ Use raw strings (`r"..."`) in comptime to avoid escaping braces: `code(r"fn test
 #### Embed
 Embed files as specified types.
 ```zc
-// Default ([char])
+// Default (Slice_char)
 let data = embed "assets/logo.png";
 
 // Typed Embed
 let text = embed "shader.glsl" as string;    // Embbed as C-string
 let rom  = embed "bios.bin" as u8[1024];     // Embed as fixed array
-let wav  = embed "sound.wav" as u8[];        // Embed as [u8]
+let wav  = embed "sound.wav" as u8[];        // Embed as Slice_u8
 ```
 
 #### Plugins

@@ -10,9 +10,8 @@ title = "std/slice"
 
 - **Sin Propiedad**: Las rodajas (slices) no copian ni poseen los datos subyacentes; simplemente apuntan a ellos.
 - **Soporte de Iteración**: Implementa el método `iterator()`, lo que permite usar rodajas directamente en bucles `for-in`.
-- **Conversión Automática**: Una matriz de tamaño fijo o un literal de matriz se ve como una rodaja allí donde se espera una: `let s: [int] = [1, 2, 3];`, `sum(arr)`, `sum([1, 2])`, un campo de una estructura. Iterar sobre una matriz de tamaño fijo también usa una rodaja.
-- **Acceso Seguro**: `s[i]` da el elemento, con comprobación de límites; `get()` y `at()` devuelven `Option<T>`.
-- **No Sirve para Devolver Datos de la Pila**: Una función que devuelve una rodaja no puede devolver un literal de matriz ni una matriz local: sus elementos viven en la pila de la función, que desaparece tras el retorno. Devuelve en su lugar una matriz de tamaño fijo o un `Vec<T>`.
+- **Conversión Automática**: El compilador de Zen-C convierte automáticamente las matrices de tamaño fijo en rodajas al realizar una iteración o al pasarlas a funciones que esperan rodajas.
+- **Acceso Seguro**: Proporciona los métodos `get()` y `at()` con comprobación de límites que devuelven `Option<T>`.
 
 ## Uso
 
@@ -39,8 +38,6 @@ fn main() {
 ```
 
 ## Definición de Estructura
-
-`Slice<T>` está integrado en el compilador: `[T]` y `T[]` son el mismo tipo (`[int]` es `Slice<int>`). `std/slice.zc` añade los métodos de abajo.
 
 ```zc
 struct Slice<T> {
@@ -75,5 +72,5 @@ struct Slice<T> {
 
 ## Notas
 
-- **Auto-importación**: El compilador importa automáticamente `std/slice.zc` al realizar una iteración `for-in` sobre matrices de tamaño fijo y rodajas.
+- **Auto-importación**: El compilador importa automáticamente `std/slice.zc` al realizar una iteración `for-in` sobre matrices de tamaño fijo.
 - **Seguridad**: Aunque `data` es un puntero directo, la estructura `Slice` fomenta el uso del método `get()`, que tiene en cuenta la longitud, para un acceso seguro.

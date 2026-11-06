@@ -106,13 +106,13 @@ Usa raw strings (`r"..."`) in comptime per evitare di eseguire l'escape delle pa
 #### Incorporati
 Incorpora file come tipi specificati.
 ```zc
-// Default ([char])
+// Default (Slice_char)
 let data = embed "assets/logo.png";
 
 // Incorporazioni tipizzate
 let testo = embed "shader.glsl" as string;    // Incorpora come una stringa C
 let rom   = embed "bios.bin" as u8[1024];     // Incorpora come un array a dimensione fissa
-let wav   = embed "sound.wav" as u8[];        // Incorpora come [u8]
+let wav   = embed "sound.wav" as u8[];        // Incorpora come Slice_u8
 ```
 
 #### Plugin
