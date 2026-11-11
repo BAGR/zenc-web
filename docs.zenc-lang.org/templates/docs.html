@@ -1213,6 +1213,10 @@
                         class="sidebar-link {% if current_path == "/docs/editors/" %}active{% endif %}">
                         {{ trans(key="editors-title", lang=lang) }}
                     </a>
+                    <a href="{{ get_url(path="docs/plugins/", trailing_slash=true) }}"
+                        class="sidebar-link {% if current_path == "/docs/plugins/" %}active{% endif %}">
+                        {{ trans(key="plugins-title", lang=lang) }}
+                    </a>
                     <a href="{{ get_url(path="docs/changelog/", trailing_slash=true) }}"
                         class="sidebar-link {% if current_path == "/docs/changelog/" %}active{% endif %}">
                         {{ trans(key="changelog-title", lang=lang) }}
